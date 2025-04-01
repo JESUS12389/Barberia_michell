@@ -1,0 +1,34 @@
+ /* {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+} */
+
+
+
+/*.menu_container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgb(164, 158, 158);
+}
+
+.navbar_list{
+    display: flex;
+    list-style: none;
+}
+.navbar_list a{
+    display: block;
+    padding:10px;
+    text-decoration: none;
+}
+ */
+
+
+body{
+    font-family: "Roboto";
+    font-style: normal;
+    overflow-x: hidden;
+}
