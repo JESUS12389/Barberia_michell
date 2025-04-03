@@ -12,20 +12,24 @@
         rel="stylesheet">
         
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
 
 </head>
 
 <body>
     <header class="header">
 
-        <div class="menu container">
+        <div class="menu_container">
+            <div class="menu_logo">
                 <a href="#" class="logo">Logo</a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
+                <!-- <input type="checkbox" id="menu">
+                <label for="menu_label">
                     <img src="/images/menu.png" class="menu-icono" alt="">
-                </label>
-            <nav class="navbar">
-                <ul>
+                </label> -->
+            </div>
+    
+            <nav class="menu_navbar">
+                <ul class="menu_navbar_list">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Cervicios</a></li>
                     <li><a href="#">Productos</a></li>
@@ -36,7 +40,6 @@
 
         <div class="header-content container">
             <div class="header-txt">
-
                 <h1>Barberia Raul</h1>
                 <span>Sitilpech</span>
                 <p>
@@ -45,15 +48,13 @@
                     odio molestiae eveniet pariatur omnis! Eos
                     ipsam reprehenderit, inventore sapiente excepturi provident officia animi?
                 </p>
-                <a href="#" class="btn-1">Informacion</a>
+                <a  href="#" class="header_btn">Informacion</a>
             </div>
+
             <div class="header-dir">
                 <div class="dir">
-
                     <h3>Direccion</h3>
                     <p>CALLE #14X23</p>
-
-
 
                 </div>
                 <div class="dir">
@@ -79,30 +80,34 @@
 
 
     <section class="welcome">
-
-        <div class="welcome-1"></div>
+        <div class="welcome-1">
+            <img src="images/a1.jpg" alt="">            
+        </div>
 
         <div class="welcome-2">
+                <div class="welcome2_content">
+                    <h2>Bienvenidos a la barberia</h2>
+                    <p class="welcome2_b1">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
 
-            <h2>Bienvenidos a la barberia</h2>
-
-            <p class="b1">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-
-            <p>
-                lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Incidunt aspernatur magnam molestiae porro ipsam consectetur illo totam
-                neque aliquid laborum nihil, a ea at exercitationem vero, odio voluptatem
-                praesentium rem?
-            </p>
-            <a href="#" class="btn-1">Informacion</a>
+                    <p class="welcome2_p2">
+                        lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Incidunt aspernatur magnam molestiae porro ipsam consectetur illo totam
+                        neque aliquid laborum nihil, a ea at exercitationem vero, odio voluptatem
+                        praesentium rem?
+                    </p>
+                    <a href="#" class="welcome2_btn">Informacion</a>
+            </div>
         </div>
 
     </section>
 
 
-    <main class="services container">
+
+
+
+    <main class="services_container">
 
         <div class="services-txt">
             <h2>Nuestros Servicios</h2>
@@ -113,6 +118,7 @@
                 at libero ipsum quod quibusdam inventore magni aut reiciendis itaque? Ad, cupiditate.
             </p>
         </div>
+
 
         <div class="services-group">
 
