@@ -22,6 +22,7 @@ body{
 }
 
 
+
 .header{
     /* border: 1px solid black; */
    background: url(images/bg-2.png) no-repeat ;
@@ -41,6 +42,8 @@ body{
     font-size: 2rem
 }
 
+
+
 .menu_navbar_list{
     display: flex;
     flex-direction: row;
@@ -48,6 +51,10 @@ body{
 }
 .menu_navbar_list a{
     color: var(--color-text-white);
+    transition: all 300ms ease-in-out;
+}
+.menu_navbar_list a:hover{
+    color: var(--color-primary);
 }
 
 .header-content{
@@ -105,10 +112,11 @@ body{
 
 .welcome-1{
     width: 40%;
-    height: 65rem;
+    height: 74rem;
     overflow: hidden;
 }
 .welcome-2{
+    width: 60%;
     padding: 10rem;
     background-color: var(--color-shadow-text);
 }
@@ -184,8 +192,13 @@ body{
     background-color: var(--color-black-card);
     padding: 5rem;
     border-radius: 1rem;
-    transition: all 300ms ease-in;
+    transition: all 200ms ease-in;
 }
+.services-1:hover{
+    background-color:var(--color-shadow-text);
+    border: 1px solid var(--color-black-card);
+}
+
 
 .services-1 img{
     margin: 0 auto;
@@ -199,9 +212,6 @@ body{
     font-size: 3rem;
 }
 
-.services-1:hover{
-    background-color: #ccc;
-}
 
 .services-1 p {
     margin: 2rem 0;
@@ -326,6 +336,7 @@ footer h2{
     border: 2px solid var(--color-primary);
     padding: 2rem;
     border-radius: 1rem;
+    color: var(--color-black-card);
 }
 
 .footer-bg input[type='submit']{
