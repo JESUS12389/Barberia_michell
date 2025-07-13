@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barberia Raul</title>
+    <title>Hotel los arcos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,39 +14,43 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 </head>
 
 <body>
-    <header class="header">
+  <div class="menu_container">
+    <div class="menu_logo">
+        <a href="#" class="logo">Logo</a>
+        <!-- <input type="checkbox" id="menu">
+        <label for="menu_label">
+            <img src="/images/menu.png" class="menu-icono" alt="">
+        </label> -->
+    </div>
 
-        <div class="menu_container">
-            <div class="menu_logo">
-                <a href="#" class="logo">Logo</a>
-                <!-- <input type="checkbox" id="menu">
-                <label for="menu_label">
-                    <img src="/images/menu.png" class="menu-icono" alt="">
-                </label> -->
-            </div>
-    
-            <nav class="menu_navbar">
-                <ul class="menu_navbar_list">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicio">Servicios</a></li>
-                    <li><a href="#producto">Productos</a></li>
-                    <li><a href="#personal">Personal</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <nav class="menu_navbar">
+        <ul class="menu_navbar_list">
+            <li><a href="#" data-seccion="inicio">Inicio</a></li>
+<li><a href="#" data-seccion="servicio">Servicios</a></li>
+<li><a href="#" data-seccion="Galeria">Galería</a></li>
+<li><a href="#" data-seccion="reserva">Reserva</a></li>
+<li><a href="#" data-seccion="nosotros">Nosotros</a></li>
+<li><a href="#" data-seccion="admin"><i class="fa-solid fa-user"></i> Admin</a></li>
 
+
+
+        </ul>
+    </nav>
+</div>
+
+    <header class="header"id="header">
         <div class="header-content container">
             <div class="header-txt">
-                <h1>Barberia Raul</h1>
-                <span>Sitilpech</span>
+                <h1>Hotel los arcos</h1>
+                <span>Izamal</span>
                 <p>
-                    "Te ofrecemos la mejor experiencia en coretes"
+                    "Te ofrecemos la mejor experiencia en hospedajes"
                 </p>
                 <a  href="#" class="header_btn">Informacion</a>
             </div>
@@ -54,19 +58,19 @@
             <div class="header-dir">
                 <div class="dir">
                     <h3>Direccion</h3>
-                    <p>CALLE #14X23</p>
+                    <p>CALLE 30 entre 21 y 23</p>
 
                 </div>
                 <div class="dir">
 
                     <h3>TELEFONO</h3>
-                    <p>9983034890</p>
+                    <p>9981077886</p>
 
                 </div>
                 <div class="dir">
 
                     <h3>Horario</h3>
-                    <p>2pm a 7pm</p>
+                    <p>6am a 12am</p>
 
                 </div>
             </div>
@@ -75,21 +79,32 @@
     </header>
 
 
-    <section class="welcome" id="inicio">
+
+
+
+
+
+
+
+
+
+    <section class="welcome seccion activa" id="inicio">
+
+
         <div class="welcome-1">
             <img src="images/a1.jpg" alt="">            
         </div>
 
         <div class="welcome-2">
                 <div class="welcome2_content">
-                    <h2>Bienvenidos a la barberia</h2>
+                    <h2>Bienvenidos al hotel los arcos</h2>
                     <p class="welcome2_b1">
-                        "¡Bienvenido a Bareberia Raul Nos alegra
-                     tenerte aquí. Explora nuestro sitio y descubre 
-                     nuestrosservicios,productos,contenido diseñados 
-                     especialmente para ti. Estamos comprometidos en 
-                     brindarte la mejor experiencia, así que si necesitas
-                      ayuda, no dudes en contactarnos. ¡Disfruta tu visita!
+¡Bienvenido al Hotel Los Arcos de Izamal!
+Es un placer recibirte en el corazón de la Ciudad de las Tres Culturas.
+Nuestro hotel combina el encanto colonial con la calidez y hospitalidad yucateca, para que vivas una experiencia única e inolvidable.
+Explora nuestro sitio y descubre nuestras habitaciones, servicios y recomendaciones para disfrutar de Izamal al máximo.
+Estamos aquí para ayudarte en lo que necesites.
+¡Disfruta tu estancia y siéntete como en casa!
                     </p>
 
                     <p class="welcome2_p2">
@@ -98,165 +113,477 @@
                     <a href="#" class="welcome2_btn">Informacion</a>
             </div>
         </div>
-
     </section>
 
 
-    <main class="services_container" id="servicio">
 
-        <div class="services-txt">
-            <h2>Nuestros Servicios</h2>
-            <hr>
-            <p>
-                Nuestros servicios que ofrecemos van 
-                desde cortes de cabello,
-                tintes de pelo,pigmento de cejas,corte
-                de barba con precios super accesibles
-            
-               
-            </p>
+<!-- SECCIÓN NOSOTROS --------------------------------------->
+<section id="nosotros" class="nosotros_container seccion" style="display: none;">
+    <div class="nosotros-txt">
+      <h2>Sobre Nosotros</h2>
+      <hr>
+      <p>
+        En Hotel Los Arcos, nos enorgullece ofrecer una experiencia auténtica en el corazón de Izamal. Nuestro hotel
+        está diseñado para brindarte comodidad, tranquilidad y una atención cálida que te hará sentir como en casa.
+      </p>
+    </div>
+    <div class="nosotros-carousel">
+      <div class="nosotros-track">
+        <div class="nosotros-item">
+          <img src="images/nosotros1.jpg" alt="Recepción del hotel">
+        </div>
+        <div class="nosotros-item">
+          <img src="images/nosotros2.jpg" alt="Vista interior del hotel">
+        </div>
+      </div>
+      <button class="nosotros-btn prev">⟨</button>
+      <button class="nosotros-btn next">⟩</button>
+    </div>
+  </section>
+
+  
+
+
+    <!--SERVICIOS------------------------------------------------>
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicio" class="services_container seccion" style="display: none;">
+    <div class="services-txt">
+      <h2>Nuestros Servicios</h2>
+      <hr>
+      <p>Disfruta de las comodidades que ofrecemos durante tu estadía.</p>
+    </div>
+  
+    <div class="servicio">
+      <!-- Servicio: Acceso a alberca -->
+      <div class="services-1">
+        <img src="images/alberca.jpg" alt="">
+        <h3>Acceso a la alberca</h3>
+        <p>Relájate en nuestra alberca al aire libre, disponible para todos los huéspedes sin costo adicional.</p>
+        <button onclick="mostrarImagen('images/alberca.jpg')">Ver imagen</button>
+      </div>
+  
+      <!-- Servicio: Banquetes y eventos -->
+      <div class="services-1">
+        <img src="images/ByE.jpg" alt="">
+        <h3>Banquetes y Eventos</h3>
+        <p>Disponemos de un área especializada para la organización de banquetes, bodas y eventos corporativos.</p>
+        <button onclick="mostrarImagen('images/ByE.jpg')">Ver imagen</button>
+      </div>
+  
+      <!-- Servicio: Cocina -->
+      <div class="services-1">
+        <img src="images/cocina.jpg" alt="">
+        <h3>Servicio de cocina</h3>
+        <p>Menú de platillos regionales, preparados al momento. Puedes comer en nuestro comedor o pedir a la habitación.</p>
+        <button onclick="mostrarImagen('images/cocina.jpg')">Ver imagen</button>
+      </div>
+  
+      <!-- Servicio: Estacionamiento -->
+      <div class="services-1">
+        <img src="images/estacionamiento.jpg" alt="">
+        <h3>Estacionamiento gratuito</h3>
+        <p>Tu seguridad es importante. Contamos con estacionamiento privado sin costo para huéspedes.</p>
+        <button onclick="mostrarImagen('images/estacionamiento.jpg')">Ver imagen</button>
+      </div>
+    </div>
+  
+    <div id="imagen-servicio" style="display:none; margin-top: 2rem; text-align: center;">
+      <img id="imagen-preview" src="" alt="Vista del servicio" style="max-width: 600px; border-radius: 12px;">
+    </div>
+  </section>  
+      <div id="imagen-servicio" style="display:none; margin-top: 2rem; text-align: center;">
+        <img id="imagen-preview" src="" alt="Vista del servicio" style="max-width: 600px; border-radius: 12px;">
+      </div>
+   
+
+
+
+
+
+     <!-- GALERIAS --------------------------------------------------->
+     <!-- GALERIAS --------------------------------------------------->
+<section class="seccion" id="Galeria" style="display: none;">
+  <div class="nosotros_container">
+    <div class="nosotros-txt">
+      <h2>Nuestras habitaciones</h2>
+      <hr>
+      <p>Conoce nuestras opciones de hospedaje: habitaciones sencillas y dobles, cómodas y climatizadas.</p>
+    </div>
+
+    <div class="nosotros-carousel">
+      <div class="nosotros-track" id="galeria-track">
+        <!-- Habitación Sencilla -->
+        <div class="nosotros-item">
+          <img src="images/habitacion-sencilla.jpg" alt="Habitación sencilla">
+          <h3>Habitación Sencilla</h3>
+          <p class="precio-habitacion">$400 por noche</p>
+          <p>Ideal para 1 o 2 personas. Con aire acondicionado, TV y baño privado.</p>
         </div>
 
-
-        <div class="services-group">
-
-            <div class="services-1">
-                <img src="images/i1.svg" alt="">
-                <h3>Servicio 1</h3>
-                <p>
-                    Corte de Cabello
-                    Incluye desvanecido, 
-                tijera o máquina según tu estilo, limpieza con navaja y peinado final.
-
-
-               
-
-
-                </p>
-                <a href="#">Saber mas</a>
-
-            </div>
-            <div class="services-1">
-                <img src="images/i2.svg" alt="">
-                <h3>Servicio 2</h3>
-                <p>
-                    Diseño de Cejas
-Perfilamos tus cejas con precisión para resaltar tu expresión, manteniendo un look masculino y natural.
-
-                </p>
-                <a href="#">Saber mas</a>
-
-            </div>
-            <div class="services-1">
-                <img src="images/i3.svg" alt="">
-                <h3>Servicio 3</h3>
-                <p>
-                    Barba
-                    Rebajado, perfilado y  
-                    limpieza con navaja. Usamos
-                     toalla caliente y productos especiales para cuidar tu piel y barba.
-                </p>
-                <a href="#">Saber mas</a>
-
-            </div>
+        <!-- Habitación Doble -->
+        <div class="nosotros-item">
+          <img src="images/habitacion-doble.jpg" alt="Habitación doble">
+          <h3>Habitación Doble</h3>
+          <p class="precio-habitacion">$450 por noche</p>
+          <p>Perfecta para familias pequeñas. Con dos camas, TV, clima y baño privado.</p>
         </div>
-        <a href="#" class="services_btn-1">Informacion</a>
-    </main>
+      </div>
+
+      <!-- Botones del carrusel -->
+      <button class="nosotros-btn prev" onclick="moverCarrusel('galeria-track', -1)">⟨</button>
+      <button class="nosotros-btn next" onclick="moverCarrusel('galeria-track', 1)">⟩</button>
+    </div>
+
+    <a href="#reserva" class="personal_btn">Reservar</a>
+  </div>
+</section>
+      
 
 
-    <section class="prices" id="producto">
-
-        <div class="prices-1">
-            <h2>Lista de Precios</h2>
-            <p>
-                En nuestra barbería cuidamos tu estilo y tu bolsillo. 
-                
-            Nuestros precios son muy accesibles, así que no hay excusas para no
-                 lucir bien. Aquí cada corte es más que un cambio de look,
-                  es una experiencia ,nuestros precios son los siguientes:
-
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Corte</th>
-                        <td>$80</td>
-                    </tr>
-                    <tr>
-                        <th>Cejas</th>
-                        <td>$50</td>
-                    </tr>
-                    <tr>
-                        <th>barba</th>
-                        <td>$80</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" class="prices_btn">Informacion</a>
-
+    
+      <!--SECCION DE RESERVAS--------------------------------------------------------->
+      <section class="reserva seccion" id="reserva" style="display: none;">
+        <div class="form-container">
+          <h2>Reserva tu habitación</h2>
+          <form id="reservaForm">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" placeholder="10 dígitos">
+            <label for="entrada">Fecha de entrada:</label>
+            <input type="date" id="entrada" name="entrada" required>
+            <label for="salida">Fecha de salida:</label>
+            <input type="date" id="salida" name="salida" required>
+            <label for="personas">Número de personas:</label>
+            <select id="personas" name="personas">
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+            </select>
+            <label for="niños">Número de niños:</label>
+            <select id="niños" name="niños">
+                <option value="0">0</option>
+              <option value="1">1 niños</option>
+              <option value="2">2 niños</option>
+              <option value="3">3 niños</option>
+              <option value="4">4 niños</option>
+            </select>
+            <label for="habitacion">Tipo de habitación:</label>
+            <select id="habitacion" name="habitacion">
+              <option value="sencilla">Sencilla</option>
+              <option value="doble">Doble</option>
+            </select>
+            <button type="submit">Reservar</button>
+          </form>
+          <div class="success-message" id="mensajeExito"></div>
         </div>
-        <div class="prices-2"></div>
-    </section>
+      </section>
+      <script>
+        document.getElementById("reservaForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+      
+          const entrada = new Date(document.getElementById("entrada").value);
+          const salida = new Date(document.getElementById("salida").value);
+      
+          if (salida <= entrada) {
+            alert("La fecha de salida debe ser posterior a la de entrada.");
+            return;
+          }
+      
+          // Crear nueva reserva con los datos del formulario
+          const nuevaReserva = {
+            nombre: document.getElementById("nombre").value,
+            email: document.getElementById("email").value,
+            telefono: document.getElementById("telefono").value,
+            entrada: document.getElementById("entrada").value,
+            salida: document.getElementById("salida").value,
+            personas: document.getElementById("personas").value,
+            niños: document.getElementById("niños").value,
+            habitacion: document.getElementById("habitacion").value
+          };
+      
+          // Agregar al array global de reservas
+          reservas.push(nuevaReserva);
+      
+          // Mostrar mensaje de éxito
+          document.getElementById("mensajeExito").innerText = "¡Reserva realizada con éxito!";
+          document.getElementById("reservaForm").reset();
+      
+          // Si el admin ya está logueado, actualizar la tabla
+          if (document.getElementById("admin-content").style.display === "block") {
+            mostrarReservas();
+          }
+        });
+      </script>
+      
 
-    <section class="personal_container" id="personal">
-
-        <div class="personal-txt">
-            <h2>Nuestro Estilista</h2>
-            <hr>
-            <p>
-                Nuestro estilista Raúl Michel es un experto en su arte.
-                 No solo se trata de cortar, sino de entender lo que te queda bien y lo
-                 
-                que realmente va con tu estilo. Tiene experiencia en cortes modernos, desvanecidos perfectos, diseño de barba y cejas, y siempre está al tanto de las últimas tendencias. Si no sabes qué hacerte, él te asesora con confianza y te recomienda lo que mejor va con la forma de tu rostro, tu tipo de cabello y tu estilo personal. Además, es detallista, paciente y siempre te 
-                hace sentir cómodo. Muchos clientes vienen por un corte… y se quedan por la experiencia que él ofrece.
-
-            </p>
 
 
-        </div>
 
-        <div class="personal-group">
-            <div class="persona-1">
-                <img src="images/b1.jpg" alt="">
-                
-                
-                
+      <!--CARRUCEL--------------------------------------------------------------------->
+      <script>
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        let currentIndex = 0;
+        nextBtn.addEventListener('click', () => {
+          if (currentIndex < track.children.length - 1) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+        function updateCarousel() {
+          const width = track.children[0].getBoundingClientRect().width;
+          track.style.transform = `translateX(-${width * currentIndex}px)`;
+        }
+      </script>
+<!--IMG SERVICIOS--------------------------------------------------------------------->
+<script>
+    function mostrarImagen(ruta) {
+      const contenedor = document.getElementById("imagen-servicio");
+      const imagen = document.getElementById("imagen-preview");
+      imagen.src = ruta;
+      contenedor.style.display = "block";
+      imagen.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+<!--IMG NOSOTROS--------------------------------------------------------------------->
+<script>
+    const trackNos = document.querySelector('.nosotros-track');
+    const prevNos = document.querySelector('.nosotros-btn.prev');
+    const nextNos = document.querySelector('.nosotros-btn.next');
+    let indexNos = 0;
+  
+    nextNos.addEventListener('click', () => {
+      if (indexNos < trackNos.children.length - 1) {
+        indexNos++;
+        updateNosotros();
+      }
+    });
+  
+    prevNos.addEventListener('click', () => {
+      if (indexNos > 0) {
+        indexNos--;
+        updateNosotros();
+      }
+    });
+  
+    function updateNosotros() {
+      const width = trackNos.children[0].getBoundingClientRect().width;
+      trackNos.style.transform = `translateX(-${width * indexNos}px)`;
+    }
+  </script>
+
+
+<!-- PANEL ADMINISTRATIVO ----------------------------------------------------->
+<!-- PANEL ADMINISTRATIVO COMPLETO -->
+<section id="admin" class="admin_container seccion"style="display: none;">
+    <div id="login-panel">
+        <h2>Panel Administrativo</h2>
+        <form id="adminLoginForm">
+            <label for="adminUser">Usuario:</label>
+            <input type="text" id="adminUser" required>
+            <label for="adminPass">Contraseña:</label>
+            <input type="password" id="adminPass" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="loginError" style="color: red; display: none;">Credenciales incorrectas</p>
+    </div>
+
+    <div id="admin-content" style="display:none;">
+        <h2>Bienvenido, Administrador</h2>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+        <button onclick="descargarReporte()">Descargar reporte</button>
         
-        
-            </div>
-            
-            </div>
-        </div>
-        <a href="#" class="personal_btn">Informacion</a>
+        <h3>Reservas registradas</h3>
+        <table border="1" id="tablaReservas">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Entrada</th>
+                    <th>Salida</th>
+                    <th>Teléfono</th>
+                    <th>Habitación</th>
+                    <th>Personas</th>
+                    <th>Niños</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las reservas aparecerán aquí -->
+            </tbody>
+        </table>
+    </div>
+</section>
 
-    </section>
+<!-- PANEL ADMINISTRATIVO3----------------------------------------------------->
+<script>
+    // Login simple
+    const formLogin = document.getElementById("adminLoginForm");
+    const adminUser = "admin";
+    const adminPass = "1234";
 
+    formLogin.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const user = document.getElementById("adminUser").value;
+        const pass = document.getElementById("adminPass").value;
 
-    <footer id="contacto">
-        <h2>Reserva una cita</h2>
-        <div class="footer-bg">
-            <form>
-                <div class="campo-1">
-                    <input class="campo" type="text" placeholder="Nombre">
-                    <input class="campo" type="number" placeholder="TELEFONO">
-                </div>
-                <div class="campo-1">
-                    <input class="campo" type="text" placeholder="Direccion">
-                    <input class="campo" type="email" placeholder="correo">
-                </div>
-                <textarea class="campo" cols="30" rows="10" placeholder="Texto"></textarea>
-                <input type="submit" id="enviarForm" value="Enviar" class="btn-1">
-            </form>
-        </div>
-        <div class="footer-txt">
-            <p>
-               "Eso,crack. ¡Reserva ya tu cita, no lo pienses mas!"
-            </p>
-        </div>
-    </footer>
+        if (user === adminUser && pass === adminPass) {
+            document.getElementById("login-panel").style.display = "none";
+            document.getElementById("admin-content").style.display = "block";
+            mostrarReservas();
+        } else {
+            document.getElementById("loginError").style.display = "block";
+        }
+    });
 
+    // Datos simulados
+    let reservas = [
+        { nombre: "Juan Pérez", email: "juan@example.com", entrada: "2025-07-01", salida: "2025-07-03", telefono: "9981000000", habitacion: "Sencilla", personas: 2, niños: 1 },
+        { nombre: "Ana López", email: "ana@example.com", entrada: "2025-07-05", salida: "2025-07-07", telefono: "9982000000", habitacion: "Doble", personas: 4, niños: 2 }
+    ];
 
-<script src="app.js"></script>
+    // Mostrar reservas
+    function mostrarReservas() {
+        const tbody = document.querySelector("#tablaReservas tbody");
+        tbody.innerHTML = "";
+
+        reservas.forEach((reserva, index) => {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${reserva.nombre}</td>
+                <td>${reserva.email}</td>
+                <td>${reserva.entrada}</td>
+                <td>${reserva.salida}</td>
+                <td>${reserva.telefono}</td>
+                <td>${reserva.habitacion}</td>
+                <td>${reserva.personas}</td>
+                <td>${reserva.niños}</td>
+                <td>
+                    <button onclick="editarReserva(${index})">Editar</button>
+                    <button onclick="eliminarReserva(${index})">Eliminar</button>
+                </td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+
+    // Editar reserva
+    function editarReserva(index) {
+        const nuevaSalida = prompt("Nueva fecha de salida (YYYY-MM-DD):", reservas[index].salida);
+        if (nuevaSalida) {
+            reservas[index].salida = nuevaSalida;
+            mostrarReservas();
+        }
+    }
+
+    // Eliminar reserva
+    function eliminarReserva(index) {
+        if (confirm("¿Seguro que quieres eliminar esta reserva?")) {
+            reservas.splice(index, 1);
+            mostrarReservas();
+        }
+    }
+
+    // Descargar reporte
+    function descargarReporte() {
+        let contenido = "Nombre,Correo,Entrada,Salida,Teléfono,Habitación,Personas,Niños\n";
+        reservas.forEach(r => {
+            contenido +=`${r.nombre},${r.email},${r.entrada},${r.salida},${r.telefono},${r.habitacion},${r.personas},${r.niños}\n`;
+        });
+
+        const blob = new Blob([contenido], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "reporte_reservas.csv";
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+    // Función para cerrar sesión
+function cerrarSesion() {
+    document.getElementById("admin-content").style.display = "none";
+    document.getElementById("login-panel").style.display = "block";
+    document.getElementById("adminLoginForm").reset();
+    document.getElementById("loginError").style.display = "none";
+}
+    // Hacer las funciones accesibles globalmente
+    window.editarReserva = editarReserva;
+    window.eliminarReserva = eliminarReserva;
+    window.descargarReporte = descargarReporte;
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const enlacesMenu = document.querySelectorAll('.menu_navbar_list a[data-seccion]');
+    const secciones = document.querySelectorAll('.seccion');
+    const headerPrincipal = document.getElementById('header');
+
+    enlacesMenu.forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        e.preventDefault();
+        const idSeccion = this.getAttribute('data-seccion');
+
+        // Oculta todas las secciones
+        secciones.forEach(sec => {
+          sec.style.display = 'none';
+        });
+
+        // Muestra la sección deseada
+        const seccionActiva = document.getElementById(idSeccion);
+        if (seccionActiva) {
+          seccionActiva.style.display = 'block';
+          seccionActiva.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mostrar el header solo en inicio
+        if (idSeccion === 'inicio') {
+          headerPrincipal.style.display = 'block';
+        } else {
+          headerPrincipal.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+<script>
+  function moverCarrusel(idTrack, direccion) {
+    const track = document.getElementById(idTrack);
+    const width = track.offsetWidth;
+    const totalItems = track.children.length;
+    const itemWidth = track.children[0].offsetWidth;
+    const visibleItems = Math.floor(width / itemWidth);
+    const maxScroll = (totalItems - visibleItems) * itemWidth;
+
+    let currentTransform = getComputedStyle(track).transform;
+
+    if (currentTransform !== 'none') {
+      let matrix = new WebKitCSSMatrix(currentTransform);
+      let currentX = Math.abs(matrix.m41);
+      let newX = currentX + direccion * itemWidth;
+
+      if (newX < 0) newX = 0;
+      if (newX > maxScroll) newX = maxScroll;
+
+      track.style.transform = `translateX(-${newX}px)`;  // ✅ COMILLAS CORRECTAS
+    } else {
+      track.style.transform = `translateX(${direccion * -itemWidth}px)`;  // ✅ COMILLAS CORRECTAS
+    }
+  }
+</script>
 
 </body>
 
