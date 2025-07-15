@@ -167,12 +167,42 @@ body {
   }
   
   
+  .servicios{
+    margin-top:50px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-  .services_container {
-    background-color: var(--color-shadow-text);
-    padding: 8rem 2rem;
-    text-align: center;
+
+
+  .services-1{
+    background-color: var(--color-black-card);
+    padding: 5rem;
+    border-radius: 1rem;
+    transition: all 200ms ease-in;
+    flex-basis: calc( 25% - 12px);
 }
+
+    .services_container {
+        background-color: var(--color-shadow-text);
+        padding: 8rem 2rem;
+        text-align: center;
+    }
+
+    #imagen-servicio{
+        width: 90%;
+        overflow: hidden;
+        margin:0 auto;
+    }
+
+    .imagen_preview{
+        width: 100%;
+        margin: 0 auto;
+    }
+
 
 .services-txt h2{
     font-size: 8rem;
@@ -201,20 +231,18 @@ body {
     margin-bottom: 7rem;
 }
 
-.services-1{
-    background-color: var(--color-black-card);
-    padding: 5rem;
-    border-radius: 1rem;
-    transition: all 200ms ease-in;
+.service_btn{
+    margin: 0 auto;
+    padding: 2px;
 }
-.services-1:hover{
-    background-color:var(--color-shadow-text);
-    border: 1px solid var(--color-black-card);
+
+#servicio{
+    height: 100vh;
 }
 
 
 .services-1 img{
-    margin: 0 auto;
+   width: 100%;
 }
 
 .services-1 h3,p{
@@ -235,6 +263,11 @@ body {
     color: var(--color-primary);
 }
 
+.menu_logo{
+    width: 6rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
 .prices{
     background-color: var(--color-black-card);   
@@ -576,19 +609,22 @@ footer h2{
     border-radius: 8px;
   }
   /*menu-----------------------------------------*/  
+
+
   .menu_navbar_list {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     list-style: none;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
+   text-shadow: 1px 2px 3px black;
   }
   
   .menu_navbar_list a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
