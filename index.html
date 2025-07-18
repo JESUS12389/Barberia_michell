@@ -26,12 +26,13 @@
         <img src="images/e1.jpg" alt="">
       </div>
 
-      <nav class="menu_navbar">
+      <nav class="menu_navbar">+-
         <ul class="menu_navbar_list">
           <li><a href="#" data-seccion="inicio">Inicio</a></li>
           <li><a href="#" data-seccion="servicio">Servicios</a></li>
           <li><a href="#" data-seccion="Galeria">Galería</a></li>
           <li><a href="#" data-seccion="reserva">Reserva</a></li>
+          <li><a href="#" data-seccion="contacto">contacto</a></li>
           <li><a href="#" data-seccion="nosotros">Nosotros</a></li>
           <li>
             <a href="#" data-seccion="admin"
@@ -326,6 +327,29 @@
         <div class="success-message" id="mensajeExito"></div>
       </div>
     </section>
+    <!--PANEL DE CONTACTO-->
+<section id="contacto" class="seccion" style="display: none">
+  <div class="form-container">
+    <h2>Contáctanos - Hotel Los Arcos, Izamal</h2>
+    <form id="contactoForm">
+      <label for="nombreContacto">Nombre completo:</label>
+      <input type="text" id="nombreContacto" name="nombreContacto" required />
+
+      <label for="emailContacto">Correo electrónico:</label>
+      <input type="email" id="emailContacto" name="emailContacto" required />
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+  
+    </form>
+    <div class="success-message" id="mensajeExitoContacto"></div>
+  </div>
+</section>
 
     <!-- PANEL ADMINISTRATIVO ----------------------------------------------------->
     <!-- PANEL ADMINISTRATIVO COMPLETO -->
