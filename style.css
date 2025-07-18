@@ -182,9 +182,16 @@ body {
     background-color: var(--color-black-card);
     padding: 5rem;
     border-radius: 1rem;
-    transition: all 200ms ease-in;
     flex-basis: calc( 25% - 12px);
+    border: 2px solid black;
+    transition: all 200ms ease-in;
 }
+
+
+    .services-1:hover{
+      
+      border: 2px solid white;
+    }
 
     .services_container {
         background-color: var(--color-shadow-text);
@@ -193,14 +200,16 @@ body {
     }
 
     #imagen-servicio{
-        width: 90%;
+        width: 90%;     
         overflow: hidden;
         margin:0 auto;
+        max-height: 500px;
     }
 
     .imagen_preview{
         width: 100%;
         margin: 0 auto;
+        border: 1px solid white;
     }
 
 
@@ -234,10 +243,6 @@ body {
 .service_btn{
     margin: 0 auto;
     padding: 2px;
-}
-
-#servicio{
-    height: 100vh;
 }
 
 
@@ -565,6 +570,10 @@ footer h2{
     z-index: 1;
     border-radius: 50%;
   }
+
+  .form-container{
+    margin-top: 200px;
+  }
   
   .nosotros-btn.prev {
     left: 10px;
@@ -581,11 +590,12 @@ footer h2{
 .admin_container {
     background-color: var(--color-black-card);
     color: var(--color-text-white);
-    padding: 8rem 2rem;
+    padding: 12rem 2rem;
     text-align: center;
   }
   
   .admin_container form {
+    color: var(--color-black-card);
     max-width: 400px;
     margin: 2rem auto;
     display: flex;
@@ -608,9 +618,35 @@ footer h2{
     cursor: pointer;
     border-radius: 8px;
   }
+
+.admin_sesion{
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0; 
+  border-bottom:1px solid white ;
+  padding-bottom: 2rem;
+}
+
+  .content_admin{
+    display: flex;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .content_table1,
+  .content_table2{
+      flex-basis: 50%;
+  }
+
+  .content_table1 table{
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+
+
+
   /*menu-----------------------------------------*/  
-
-
   .menu_navbar_list {
     display: flex;
     gap: 4rem;
@@ -657,10 +693,13 @@ footer h2{
 #admin {
   scroll-margin-top: 10rem;
   background-color: var(--color-black-card);
+  min-height: 1100px;
 }
+
 
 #servicio {
   scroll-margin-top: 120px;
+  /* min-height: 1200px; */
 }
 .menu_container {
   position: fixed;
@@ -691,3 +730,4 @@ footer h2{
 #nosotros {
   min-height: 100vh;
 }
+

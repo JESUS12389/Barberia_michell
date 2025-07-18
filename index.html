@@ -157,8 +157,7 @@
         </div>
 
         <!-- Servicio: Banquetes y eventos -->
-        <div class="services-1">
-     
+        <div class="services-1">     
           <h3>Banquetes y Eventos</h3>
           <p>
             Disponemos de un área especializada para la organización de
@@ -201,23 +200,13 @@
         <img
           id="imagen-preview"
             class="imagen_preview"
-          src=""
+          src="images/a1.jpg"
           alt="Vista del servicio"
           style="max-width: 600px; border-radius: 12px"
         />
       </div>
+  
     </section>
-    <div
-      id="imagen-servicio"
-      style="display: none; margin-top: 2rem; text-align: center"
-    >
-      <img
-        id="imagen-preview"
-        src=""
-        alt="Vista del servicio"
-        style="max-width: 600px; border-radius: 12px"
-      />
-    </div>
 
     <!-- GALERIAS --------------------------------------------------->
     <!-- GALERIAS --------------------------------------------------->
@@ -283,7 +272,7 @@
     <section class="reserva seccion" id="reserva" style="display: none">
       <div class="form-container">
         <h2>Reserva tu habitación</h2>
-        <form id="reservaForm">
+        <form id="reservaForm" class="reservaForm">
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" required />
           <label for="email">Correo electrónico:</label>
@@ -344,31 +333,47 @@
         </p>
       </div>
 
+
+      <!-- Parte de tabla -->
       <div id="admin-content" style="display: none">
         <h2>Bienvenido, Administrador</h2>
-        <button onclick="cerrarSesion()">Cerrar sesión</button>
+        <section class="admin_sesion">
+          <button onclick="descargarReporte()">Descargar reporte</button>
+          <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </section>
+        
+        <section class="content_admin">
+          <div class="content_table1">
+            <h3>Reservas registradas</h3>
+            <table  id="tablaReservas">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Entrada</th>
+                  <th>Salida</th>
+                  <th>Teléfono</th>
+                  <th>Habitación</th>
+                  <th>Personas</th>
+                  <th>Niños</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Las reservas aparecerán aquí -->
+              </tbody>
+            </table>
+          </div>
 
-        <button onclick="descargarReporte()">Descargar reporte</button>
 
-        <h3>Reservas registradas</h3>
-        <table border="1" id="tablaReservas">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Entrada</th>
-              <th>Salida</th>
-              <th>Teléfono</th>
-              <th>Habitación</th>
-              <th>Personas</th>
-              <th>Niños</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Las reservas aparecerán aquí -->
-          </tbody>
-        </table>
+          <!-- Segunda tabla -->
+          <div class="content_table2">
+
+
+
+
+          </div>
+        </section>
       </div>
     </section>
 
