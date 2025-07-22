@@ -227,3 +227,5 @@ function cerrarSesion() {
       contenedor.style.display = "block";
       imagen.scrollIntoView({ behavior: "smooth" });
     }
+    
+    

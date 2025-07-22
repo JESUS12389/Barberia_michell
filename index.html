@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tektur:wght@400..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+<!-- Google Fonts: Montserrat (títulos) y Lato (texto) -->
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
@@ -26,7 +28,7 @@
         <img src="images/e1.jpg" alt="">
       </div>
 
-      <nav class="menu_navbar">+-
+      <nav class="menu_navbar">
         <ul class="menu_navbar_list">
           <li><a href="#" data-seccion="inicio">Inicio</a></li>
           <li><a href="#" data-seccion="servicio">Servicios</a></li>
@@ -61,15 +63,15 @@
         </div>
 
         <div class="header-dir">
-          <div class="dir">
+          <div class="dir info-card">
             <h3>Direccion</h3>
             <p>CALLE 30 entre 21 y 23</p>
           </div>
-          <div class="dir">
+          <div class="dir info-card">
             <h3>TELEFONO</h3>
             <p>9981077886</p>
           </div>
-          <div class="dir">
+          <div class="dir info-card">
             <h3>Horario</h3>
             <p>6am a 12am</p>
           </div>
@@ -158,8 +160,7 @@
         </div>
 
         <!-- Servicio: Banquetes y eventos -->
-        <div class="services-1">
-     
+        <div class="services-1">     
           <h3>Banquetes y Eventos</h3>
           <p>
             Disponemos de un área especializada para la organización de
@@ -202,25 +203,14 @@
         <img
           id="imagen-preview"
             class="imagen_preview"
-          src=""
+          src="images/a1.jpg"
           alt="Vista del servicio"
           style="max-width: 600px; border-radius: 12px"
         />
       </div>
+  
     </section>
-    <div
-      id="imagen-servicio"
-      style="display: none; margin-top: 2rem; text-align: center"
-    >
-      <img
-        id="imagen-preview"
-        src=""
-        alt="Vista del servicio"
-        style="max-width: 600px; border-radius: 12px"
-      />
-    </div>
 
-    <!-- GALERIAS --------------------------------------------------->
     <!-- GALERIAS --------------------------------------------------->
     <section class="seccion" id="Galeria" style="display: none">
       <div class="nosotros_container">
@@ -284,7 +274,7 @@
     <section class="reserva seccion" id="reserva" style="display: none">
       <div class="form-container">
         <h2>Reserva tu habitación</h2>
-        <form id="reservaForm">
+        <form id="reservaForm" class="reservaForm">
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" required />
           <label for="email">Correo electrónico:</label>
@@ -322,11 +312,25 @@
             <option value="sencilla">Sencilla</option>
             <option value="doble">Doble</option>
           </select>
+          <label for="metodoPago">Tipo de pago:</label>
+          <select id="metodoPago" name="metodoPago">
+            <option value="">Selecciona un método</option>
+            <option value="paypal">PayPal</option>
+            <option value="efectivo">Efectivo</option>
+            </select>
+            <div id="paypalInfo" class="paypal-card" style="display: none;">
+  <div class="paypal-card-content">
+    <span>PayPal</span>
+    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Logo PayPal">
+  </div>
+</div>
           <button type="submit">Reservar</button>
         </form>
         <div class="success-message" id="mensajeExito"></div>
-      </div>
+        <div>
     </section>
+
+    
     <!--PANEL DE CONTACTO-->
 <section id="contacto" class="seccion" style="display: none">
   <div class="form-container">
@@ -348,11 +352,9 @@
   
     </form>
     <div class="success-message" id="mensajeExitoContacto"></div>
-  </div>
 </section>
 
     <!-- PANEL ADMINISTRATIVO ----------------------------------------------------->
-    <!-- PANEL ADMINISTRATIVO COMPLETO -->
     <section id="admin" class="admin_container seccion" style="display: none">
       <div id="login-panel">
         <h2>Panel Administrativo</h2>
@@ -368,35 +370,149 @@
         </p>
       </div>
 
+
+      <!-- Parte de tabla -->
       <div id="admin-content" style="display: none">
         <h2>Bienvenido, Administrador</h2>
-        <button onclick="cerrarSesion()">Cerrar sesión</button>
+        <section class="admin_sesion">
+          <button onclick="descargarReporte()">Descargar reporte</button>
+          <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </section>
+        
+        <section class="content_admin">
+          <div class="content_table1">
+            <h3>Reservas registradas</h3>
+            <table  id="tablaReservas">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Entrada</th>
+                  <th>Salida</th>
+                  <th>Teléfono</th>
+                  <th>Habitación</th>
+                  <th>Personas</th>
+                  <th>Niños</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Las reservas aparecerán aquí -->
+              </tbody>
+            </table>
+          </div>
+          <!-- Segunda tabla -->
+          <div class="content_table2">
+ <h3>Mensajes de contacto</h3>
+  <table id="tablaMensajes">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Asunto</th>
+        <th>Mensaje</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+     <tbody>
+                <!-- Las reservas aparecerán aquí -->
+     </tbody>
+  </table>
+</div>
+          </div>
+        </section>
+<script>
+  const metodoPagoSelect = document.getElementById("metodoPago");
+  const paypalInfo = document.getElementById("paypalInfo");
 
-        <button onclick="descargarReporte()">Descargar reporte</button>
+  metodoPagoSelect.addEventListener("change", function () {
+    if (this.value === "paypal") {
+      paypalInfo.style.display = "block";
+    } else {
+      paypalInfo.style.display = "none";
+    }
+  });
+  const contactoForm = document.getElementById("contactoForm");
+  const mensajeExitoContacto = document.getElementById("mensajeExitoContacto");
 
-        <h3>Reservas registradas</h3>
-        <table border="1" id="tablaReservas">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Entrada</th>
-              <th>Salida</th>
-              <th>Teléfono</th>
-              <th>Habitación</th>
-              <th>Personas</th>
-              <th>Niños</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Las reservas aparecerán aquí -->
-          </tbody>
-        </table>
-      </div>
-    </section>
+  contactoForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // evita recarga de página
+
+    mensajeExitoContacto.textContent = "¡Mensaje enviado correctamente!";
+    mensajeExitoContacto.style.display = "block";
+
+    contactoForm.reset(); // limpia los campos
+  });
+</script>
 
     <script src="app.js"></script>
     <script src="main.js"></script>
-  </body>
-</html>
+   <script>
+  // Guardar mensaje en localStorage y tabla
+  document.getElementById("contactoForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombreContacto").value;
+    const email = document.getElementById("emailContacto").value;
+    const asunto = document.getElementById("asunto").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const nuevoMensaje = { nombre, email, asunto, mensaje };
+
+    // Obtener los mensajes actuales
+    const mensajes = JSON.parse(localStorage.getItem("mensajesContacto")) || [];
+
+    // Agregar nuevo mensaje
+    mensajes.push(nuevoMensaje);
+
+    // Guardar en localStorage
+    localStorage.setItem("mensajesContacto", JSON.stringify(mensajes));
+
+    // Mostrar mensaje en la tabla si está visible
+    agregarMensajeATabla(nuevoMensaje);
+
+    this.reset();
+    document.getElementById("mensajeExitoContacto").textContent = "Mensaje enviado con éxito!";
+    setTimeout(() => {
+      document.getElementById("mensajeExitoContacto").textContent = "";
+    }, 3000);
+  });
+
+  // Agregar mensaje a la tabla HTML
+  function agregarMensajeATabla(mensaje) {
+    const tabla = document.getElementById("tablaMensajes");
+    if (!tabla) return;
+
+    const fila = tabla.insertRow();
+    fila.innerHTML = `
+      <td>${mensaje.nombre}</td>
+      <td>${mensaje.email}</td>
+      <td>${mensaje.asunto}</td>
+      <td>${mensaje.mensaje}</td>
+      <td><button onclick="eliminarMensaje(this)">Eliminar</button></td>
+    `;
+  }
+
+  // Cargar mensajes cuando el admin entra
+  function cargarMensajes() {
+    const mensajes = JSON.parse(localStorage.getItem("mensajesContacto")) || [];
+    mensajes.forEach(agregarMensajeATabla);
+  }
+
+  // Eliminar mensaje (solo visualmente, no borra de localStorage)
+  function eliminarMensaje(boton) {
+    const fila = boton.closest("tr");
+    fila.remove();
+  }
+
+  // Ejecutar cuando entra al panel admin
+  const observer = new MutationObserver(() => {
+    const adminVisible = document.getElementById("admin").style.display !== "none";
+    if (adminVisible) {
+      cargarMensajes();
+      observer.disconnect(); // Evita que cargue de nuevo si ya entró
+    }
+  });
+
+  observer.observe(document.getElementById("admin"), { attributes: true, attributeFilter: ["style"] });
+</script>

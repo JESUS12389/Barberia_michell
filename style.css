@@ -2,7 +2,7 @@
 :root{
     --color-shadow-text:#292828;
     --color-black-card:#2a2914;
-    --color-primary:#eecc1d;
+    --color-primary:#f7b800;
     --color-text-white: #f6f3f3;
     --color-text-body: #262626;
 }
@@ -14,7 +14,7 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-}q
+}
 
 body {
   font-size: 1.6rem;
@@ -182,9 +182,16 @@ body {
     background-color: var(--color-black-card);
     padding: 5rem;
     border-radius: 1rem;
-    transition: all 200ms ease-in;
     flex-basis: calc( 25% - 12px);
+    border: 2px solid black;
+    transition: all 200ms ease-in;
 }
+
+
+    .services-1:hover{
+      
+      border: 2px solid white;
+    }
 
     .services_container {
         background-color: var(--color-shadow-text);
@@ -193,14 +200,16 @@ body {
     }
 
     #imagen-servicio{
-        width: 90%;
+        width: 90%;     
         overflow: hidden;
         margin:0 auto;
+        max-height: 500px;
     }
 
     .imagen_preview{
         width: 100%;
         margin: 0 auto;
+        border: 1px solid white;
     }
 
 
@@ -234,10 +243,6 @@ body {
 .service_btn{
     margin: 0 auto;
     padding: 2px;
-}
-
-#servicio{
-    height: 100vh;
 }
 
 
@@ -565,6 +570,10 @@ footer h2{
     z-index: 1;
     border-radius: 50%;
   }
+
+  .form-container{
+    margin-top: 200px;
+  }
   
   .nosotros-btn.prev {
     left: 10px;
@@ -581,11 +590,12 @@ footer h2{
 .admin_container {
     background-color: var(--color-black-card);
     color: var(--color-text-white);
-    padding: 8rem 2rem;
+    padding: 12rem 2rem;
     text-align: center;
   }
   
   .admin_container form {
+    color: var(--color-black-card);
     max-width: 400px;
     margin: 2rem auto;
     display: flex;
@@ -608,9 +618,38 @@ footer h2{
     cursor: pointer;
     border-radius: 8px;
   }
+
+.admin_sesion{
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0; 
+  border-bottom:1px solid white ;
+  padding-bottom: 2rem;
+}
+
+  .content_admin{
+    display: flex;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .content_table1,
+  .content_table2{
+      flex-basis: 50%;
+
+  }
+
+  
+
+  .content_table1 table{
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+
+
+
   /*menu-----------------------------------------*/  
-
-
   .menu_navbar_list {
     display: flex;
     gap: 4rem;
@@ -629,7 +668,7 @@ footer h2{
   }
   
   .menu_navbar_list a:hover {
-    color: #FFD700; /* Dorado */
+    color: #f7b800; /* Dorado */
     transform: scale(1.1);
   }
   /*ocultar secciones*/
@@ -657,10 +696,13 @@ footer h2{
 #admin {
   scroll-margin-top: 10rem;
   background-color: var(--color-black-card);
+  min-height: 1100px;
 }
+
 
 #servicio {
   scroll-margin-top: 120px;
+  /* min-height: 1200px; */
 }
 .menu_container {
   position: fixed;
@@ -691,23 +733,24 @@ footer h2{
 #nosotros {
   min-height: 100vh;
 }
+
 /* ====== ESTILOS FORMULARIO DE CONTACTO ====== */
 .form-container {
   max-width: 600px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #fffdf8;
+  background-color: #121212;/*fondo*/
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(226, 182, 59, 0.2);
+  box-shadow: 0 8px 20px rgba(12, 190, 18, 0.2);
   font-family: 'Segoe UI', sans-serif;
-  color: #5b3924;
+  color: #0e0e0e;  /*letras*/
   border: 1px solid #f5e2b8;
 }
 
 .form-container h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #c0862f;
+  color: #f7b800;
   font-size: 24px;
   font-weight: bold;
 }
@@ -717,7 +760,7 @@ footer h2{
   margin-top: 15px;
   font-weight: bold;
   font-size: 15px;
-  color: #4a3621;
+  color: #f7b800;
 }
 
 .form-container input,
@@ -725,9 +768,9 @@ footer h2{
   width: 100%;
   padding: 12px 14px;
   margin-top: 6px;
-  border: 1px solid #e6d2b5;
+  border: 1px solida ;
   border-radius: 10px;
-  background-color: #fffaf2;
+  background-color: #ffec7e;
   font-size: 14px;
   transition: border-color 0.3s;
   font-family: 'Segoe UI', sans-serif;
@@ -735,14 +778,14 @@ footer h2{
 
 .form-container input:focus,
 .form-container textarea:focus {
-  border-color: #d4a017;
+  border-color: #f7b800;
   outline: none;
 }
 
 .form-container button {
   width: 100%;
-  background-color: #d4a017;
-  color: white;
+  background-color: #f7b800;
+  color: rgb(11, 11, 11);
   font-weight: bold;
   padding: 12px;
   margin-top: 25px;
@@ -754,12 +797,109 @@ footer h2{
 }
 
 .form-container button:hover {
-  background-color: #b58900;
+  background-color: #f7b800;
 }
 
-.success-message {
+
+/*PAL PAY */
+.pago-container {
   margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: #7d6522;
+}
+
+.paypal-opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.paypal-opcion img {
+  width: 100px;
+  height: auto;
+}
+
+.fake-paypal-btn {
+  background-color: #f7b800;
+  color: #111;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
   font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fake-paypal-btn:hover {
+  background-color: #f7b800;
+}
+/*PAY PAL 2*/
+.paypal-card {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: #f0f8ff;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.paypal-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paypal-card-content img {
+  width: 50px;
+  height: auto;
+}
+
+.paypal-card-content span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #003087;
+}
+
+/* Fuente general para el texto del cuerpo */
+body {
+  font-family: 'Lato', sans-serif;
+}
+/*info del inicio*/
+.header-dir {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.dir {
+  background-color: #f7b800;
+  color: #262626;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 150px;
+  min-width: 100px;
+  flex: 1;
+}
+
+.header-dir .dir h3 {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-si
 }
